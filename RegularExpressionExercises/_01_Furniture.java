@@ -16,7 +16,7 @@ public class _01_Furniture {
         List<String> furnitureNames = new ArrayList<>();
         double totalPrice = 0;
 
-        while (!input.equals("Purchase")){
+        while (!input.equals("Purchase")) {
 
             Pattern pattern = Pattern.compile(">>(?<name>[A-Za-z]+)<<(?<price>[\\d]+\\.?[0-9]*)!(?<quantity>[\\d]+)");
             Matcher matcher = pattern.matcher(input);
@@ -31,15 +31,12 @@ public class _01_Furniture {
                 totalPrice += currentPrice;
 
             }
-
-
-
             input = scanner.nextLine();
         }
         System.out.println("Bought furniture:");
         for (String furnitureName : furnitureNames) {
             System.out.println(furnitureName);
         }
-        System.out.printf("Total money spend: %.2f%n",totalPrice);
+        System.out.printf("Total money spend: %.2f%n", totalPrice);
     }
 }

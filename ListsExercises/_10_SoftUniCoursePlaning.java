@@ -19,7 +19,6 @@ public class _10_SoftUniCoursePlaning {
                     }
                     break;
                 case "Insert":
-
                     int index = Integer.parseInt(tokens[2]);
                     if(!schedule.contains(lessonTitle)) {
                         schedule.add(index, lessonTitle);
@@ -35,7 +34,6 @@ public class _10_SoftUniCoursePlaning {
                     }
                     break;
                 case "Swap":
-
                     String lessonTitle2 = input.split(":")[2];
                     if (schedule.contains(lessonTitle) && schedule.contains(lessonTitle2)) {
                         int lesson1Index = schedule.indexOf(lessonTitle);
@@ -57,10 +55,8 @@ public class _10_SoftUniCoursePlaning {
                     break;
                 case "Exercise":
                     String exercise = lessonTitle + "-Exercise";
-
                     int indexLessonTitle = schedule.indexOf(lessonTitle);
                     if(schedule.contains(lessonTitle)) {
-
                         if(indexLessonTitle == schedule.size() - 1) {
                             schedule.add(indexLessonTitle + 1, exercise);
                         } else  if(!schedule.get(indexLessonTitle + 1).equals(exercise)) {
@@ -74,19 +70,14 @@ public class _10_SoftUniCoursePlaning {
             }
             input = scanner.nextLine();
         }
-
         printList(schedule);
     }
-
-
 
     private static void printList(List<String> elements) {
         int count = 1;
         for (String element : elements) {
             System.out.println(count + "." + element);
             count++;
-
         }
     }
-
 }

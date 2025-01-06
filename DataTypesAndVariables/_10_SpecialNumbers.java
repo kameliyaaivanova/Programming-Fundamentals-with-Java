@@ -10,7 +10,7 @@ public class _10_SpecialNumbers {
 
         int n = Integer.parseInt(scanner.nextLine());
 
-        for (int i = 1; i <= n ; i++) {
+        for (int i = 1; i <= n; i++) {
 
             int number = i;
             int sum = 0;
@@ -18,7 +18,6 @@ public class _10_SpecialNumbers {
             while (number > 0) {
                 int lastDigit = number % 10;
                 sum += lastDigit;
-
                 number /= 10;
             }
             boolean isSpecial = sum == 5 || sum == 7 || sum == 11;
@@ -27,10 +26,6 @@ public class _10_SpecialNumbers {
             } else {
                 System.out.printf("%d -> %s%n",i,"False");
             }
-
         }
-
-
-
     }
 }

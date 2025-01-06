@@ -25,7 +25,6 @@ public class Main {
             for (Vehicle vehicle : vehicles) {
                 if (vehicle.getModel().equals(model)) {
                     System.out.println(vehicle);
-
                 }
             }
             model = scanner.nextLine();
@@ -42,11 +41,17 @@ public class Main {
         }
 
         double averageCars = sumCar / countCar;
-        if(countCar == 0) {averageCars = 0;}
-        System.out.printf("Cars have average horsepower of: %.2f.%n", averageCars);
-        double averageTrucks = sumTruck / countTruck;
-        if(countTruck == 0) {averageTrucks = 0;}
-        System.out.printf("Trucks have average horsepower of: %.2f.%n", averageTrucks);
 
+        if (countCar == 0) {
+            averageCars = 0;
+        }
+        System.out.printf("Cars have average horsepower of: %.2f.%n", averageCars);
+
+        double averageTrucks = sumTruck / countTruck;
+
+        if (countTruck == 0) {
+            averageTrucks = 0;
+        }
+        System.out.printf("Trucks have average horsepower of: %.2f.%n", averageTrucks);
     }
 }

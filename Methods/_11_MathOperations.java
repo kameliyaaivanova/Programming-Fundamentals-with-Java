@@ -13,32 +13,24 @@ public class _11_MathOperations {
 
         if (operator.equals("*")){
             System.out.println(multiplyOperation(number1,number2));
-
         } else if (operator.equals("+")) {
             System.out.println(addingOperation(number1,number2));
-
         } else if (operator.equals("-")){
             System.out.println(subtractingOperation(number1,number2));
         } else if (operator.equals("/")) {
             System.out.println(divisionOperation(number1,number2));
         }
-
     }
-
     public static int multiplyOperation(int number1, int number2){
         return number1 * number2;
-
     }
     public static int addingOperation(int number1, int number2){
         return number1 + number2;
-
     }
     public static int subtractingOperation(int number1, int number2){
         return number1 - number2;
-
     }
     public static int divisionOperation(int number1, int number2){
         return number1 / number2;
-
     }
 }

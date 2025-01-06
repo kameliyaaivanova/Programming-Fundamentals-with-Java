@@ -12,10 +12,7 @@ public class _10_EvenNumber {
         while (number % 2 != 0){
             System.out.println("Please write an even number.");
             number = Integer.parseInt(scanner.nextLine());
-
         }
-
             System.out.printf("The number is: %d",Math.abs(number));
-
         }
     }

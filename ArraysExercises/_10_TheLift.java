@@ -9,15 +9,12 @@ public class _10_TheLift {
 
         Scanner scanner = new Scanner(System.in);
 
-
-
         int waitingPeople = Integer.parseInt(scanner.nextLine());
         int[] wagons = Arrays.stream(scanner.nextLine().split(" "))
                 .mapToInt(Integer::parseInt)
                 .toArray();
 
         int maxCapacity = 4;
-
         boolean isLiftFull = true;
 
         for (int position = 0; position < wagons.length; position++) {
@@ -29,7 +26,6 @@ public class _10_TheLift {
                     wagons[position] += waitingPeople;
                     waitingPeople = 0;
                     isLiftFull = false;
-
                 } else {
                     wagons[position] = maxCapacity;
                     waitingPeople -= availableSpace;

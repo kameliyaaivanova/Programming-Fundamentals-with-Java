@@ -11,15 +11,12 @@ public class _08_SumOfOddNumbers {
         int oddNum = 1;
         int sum = 0;
 
-        for (int i = 0; i < n  ; i++) {
-
-            sum+=oddNum;
+        for (int i = 0; i < n; i++) {
+            sum += oddNum;
             System.out.println(oddNum);
             oddNum += 2;
-
         }
 
-        System.out.printf("Sum: %d",sum);
-
+        System.out.printf("Sum: %d", sum);
     }
 }

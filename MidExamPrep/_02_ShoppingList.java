@@ -17,7 +17,6 @@ public class _02_ShoppingList {
         String command = scanner.nextLine();
 
         while (!command.equals("Go Shopping!")){
-
             if (command.contains("Urgent")){
                 String urgentItem = (command.split(" ")[1]);
                if (!products.contains(urgentItem)){
@@ -26,7 +25,6 @@ public class _02_ShoppingList {
             } else if (command.contains("Unnecessary")) {
                 String unnecessaryItem = command.split(" ")[1];
                 products.remove(unnecessaryItem);
-                
             } else if (command.contains("Correct")) {
                 String oldItem = command.split(" ")[1];
                 String newItem = command.split(" ")[2];
@@ -39,21 +37,13 @@ public class _02_ShoppingList {
                 if (products.contains(rearrangeItem)){
                     products.remove(rearrangeItem);
                     products.add(rearrangeItem);
-
                 }
             }
-
-
             command = scanner.nextLine();
-
         }
-
         System.out.print(products.toString()
                 .replace("[", "")
                 .replace("]", "")
                 .replaceAll("!", ","));
-
-
-
     }
 }

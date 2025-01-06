@@ -25,18 +25,15 @@ public class _16_7_Registration {
                     }
                     System.out.println(userName);
                     break;
-
                 case "Reverse":
                     int startIndex = Integer.parseInt(commandsParts[1]);
                     int endIndex = Integer.parseInt(commandsParts[2]);
-
                     if (startIndex >= 0 && startIndex < userName.length() && endIndex >= 0 && endIndex < userName.length()){
                         String currentSubstring = userName.substring(startIndex,endIndex + 1);
                         StringBuilder reversedSubstring = new StringBuilder(currentSubstring).reverse();
                         System.out.println(reversedSubstring);
                     }
                     break;
-
                 case "Substring":
                     String substring = commandsParts[1];
                     if (userName.toString().contains(substring)){
@@ -49,7 +46,6 @@ public class _16_7_Registration {
                         System.out.printf("The username %s doesn't contain %s.%n",userName,substring);
                     }
                     break;
-
                 case "Replace":
                     String symbol = commandsParts[1];
                     if (userName.toString().contains(symbol)){
@@ -57,7 +53,6 @@ public class _16_7_Registration {
                         System.out.println(userName);
                     }
                     break;
-
                 case "IsValid":
                     String givenSymbol = commandsParts[1];
                     if (userName.toString().contains(givenSymbol)){
@@ -69,6 +64,5 @@ public class _16_7_Registration {
             }
             commands = scanner.nextLine();
         }
-
     }
 }

@@ -25,5 +25,6 @@ public class _02_Grades {
         }else {
             System.out.println("Excellent");
 
-        }    }
+        }
+    }
 }

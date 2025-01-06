@@ -13,13 +13,8 @@ public class _02_SumDigits {
         while (number > 0){
             int currentNum = number % 10;
             number /= 10;
-
             sum += currentNum;
-
         }
-
         System.out.println(sum);
-
-
     }
 }

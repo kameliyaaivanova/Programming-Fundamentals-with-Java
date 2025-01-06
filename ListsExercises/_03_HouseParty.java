@@ -14,10 +14,8 @@ public class _03_HouseParty {
 
         List<String> names = new ArrayList<>();
 
-
-        for (int i = 1; i <= numOfCommands ; i++) {
+        for (int i = 1; i <= numOfCommands; i++) {
             String command = scanner.nextLine();
-
             if (command.contains("is going")) {
                 String name = command.split(" ")[0];
                 if (names.contains(name)){
@@ -25,7 +23,6 @@ public class _03_HouseParty {
                 }else {
                     names.add(name);
                 }
-
             } else if (command.contains("is not going")) {
                 String name = command.split(" ")[0];
                 if (!names.contains(name)){
@@ -36,7 +33,7 @@ public class _03_HouseParty {
             }
         }
 
-        for (String name:names) {
+        for (String name : names) {
             System.out.print(name + " ");
             System.out.println();
         }

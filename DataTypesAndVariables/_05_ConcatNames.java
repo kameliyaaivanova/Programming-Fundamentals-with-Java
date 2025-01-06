@@ -11,7 +11,6 @@ public class _05_ConcatNames {
         String firstName = scanner.nextLine();
         String secondName = scanner.nextLine();
         String delimiter = scanner.nextLine();
-
         System.out.println(firstName + delimiter + secondName);
     }
 }

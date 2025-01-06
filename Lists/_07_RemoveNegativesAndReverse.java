@@ -18,7 +18,6 @@ public class _07_RemoveNegativesAndReverse {
 
         if (numbers.isEmpty()) {
             System.out.println("empty");
-
         } else {
             for (int num : numbers) {
                 System.out.print(num + " ");

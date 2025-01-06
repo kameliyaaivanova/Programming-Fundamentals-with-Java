@@ -12,32 +12,30 @@ public class _06_ValidPassword {
 
         int n = Integer.parseInt(scanner.nextLine());
 
-        for (int i = 1; i <= n ; i++) {
+        for (int i = 1; i <= n; i++) {
             String input = scanner.nextLine();
 
             Pattern pattern = Pattern.compile("_\\.+(?<password>[A-Z][A-Za-z0-9]{4,}[A-Z])_\\.+");
             Matcher matcher = pattern.matcher(input);
 
-            if (matcher.find()){
+            if (matcher.find()) {
                 String password = matcher.group("password");
                 StringBuilder numbers = new StringBuilder();
-                for (char symbol:password.toCharArray()) {
-                    if (Character.isDigit(symbol)){
+                for (char symbol : password.toCharArray()) {
+                    if (Character.isDigit(symbol)) {
                         numbers.append(symbol);
                     }
                 }
 
-                if (numbers.length() == 0){
+                if (numbers.length() == 0) {
                     System.out.println("Group: default");
                 } else {
                     System.out.println("Group: " + numbers);
                 }
 
-
-            }else {
+            } else {
                 System.out.println("Invalid pass!");
             }
         }
-
     }
 }

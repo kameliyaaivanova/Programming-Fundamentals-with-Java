@@ -12,12 +12,12 @@ public class _06_TheatrePromotion {
         int age = Integer.parseInt(scanner.nextLine());
         int price = 0;
 
-        if (age < 0 || age > 122 ){
+        if (age < 0 || age > 122) {
             System.out.println("Error!");
             return;
         }
 
-        if (day.equals("Weekday")){
+        if (day.equals("Weekday")) {
             if (age >= 0 && age <= 18) {
                 price = 12;
             } else if (age > 18 && age <= 64) {
@@ -25,7 +25,6 @@ public class _06_TheatrePromotion {
             } else if (age > 64 && age <= 122) {
                 price = 12;
             }
-
         } else if (day.equals("Weekend")) {
             if (age >= 0 && age <= 18) {
                 price = 15;
@@ -34,8 +33,6 @@ public class _06_TheatrePromotion {
             } else if (age > 64 && age <= 122) {
                 price = 15;
             }
-
-
         } else if (day.equals("Holiday")) {
             if (age >= 0 && age <= 18) {
                 price = 5;
@@ -44,12 +41,7 @@ public class _06_TheatrePromotion {
             } else if (age > 64 && age <= 122) {
                 price = 10;
             }
-
-
         }
-
-        System.out.printf("%d$",price);
-
-
+        System.out.printf("%d$", price);
     }
 }

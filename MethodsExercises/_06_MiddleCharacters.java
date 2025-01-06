@@ -11,6 +11,7 @@ public class _06_MiddleCharacters {
         Scanner scanner = new Scanner(System.in);
 
         String text = scanner.nextLine();
+
         middleCharacter(text);
 
     }
@@ -20,7 +21,6 @@ public class _06_MiddleCharacters {
        if (textLength % 2 != 0){
            int middleCharacter = textLength / 2;
            System.out.println(text.charAt(middleCharacter));
-
        } else {
            int firstMiddleCharacter = text.length()/2 - 1;
            int secondMiddleCharacter = text.length() / 2;

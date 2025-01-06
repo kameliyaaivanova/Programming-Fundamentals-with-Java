@@ -18,7 +18,6 @@ public class _06_MovingTarget {
         String command = scanner.nextLine();
 
         while (!command.equals("End")){
-
             if (command.contains("Shoot")){
                 int index = Integer.parseInt(command.split(" ")[1]);
                 int power = Integer.parseInt(command.split(" ")[2]);
@@ -29,7 +28,6 @@ public class _06_MovingTarget {
                         targets.remove(index);
                     }
                 }
-
             } else if (command.contains("Add")) {
                 int index = Integer.parseInt(command.split(" ")[1]);
                 int value = Integer.parseInt(command.split(" ")[2]);
@@ -39,7 +37,6 @@ public class _06_MovingTarget {
                 }else {
                     System.out.println("Invalid placement!");
                 }
-
             } else if (command.contains("Strike")) {
                 int index = Integer.parseInt(command.split(" ")[1]);
                 int radius = Integer.parseInt(command.split(" ")[2]);
@@ -51,21 +48,16 @@ public class _06_MovingTarget {
                     for (int i = 0; i < count; i++) {
                         targets.remove(leftIndex);
                     }
-
                 } else {
                     System.out.println("Strike missed!");
-
                 }
             }
-
             command = scanner.nextLine();
-
         }
         System.out.println(targets.toString()
                 .replace("[", "")
                 .replace("]", "")
                 .replaceAll(",", "|")
                 .replaceAll(" ",""));
-
     }
 }

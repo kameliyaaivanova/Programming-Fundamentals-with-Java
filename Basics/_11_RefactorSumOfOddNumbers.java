@@ -14,9 +14,7 @@ public class _11_RefactorSumOfOddNumbers {
         for (int i = 0; i < n; i++) {
             System.out.println(2 * i + 1);
             sum += 2 * i + 1 ;
-
         }
-
         System.out.printf("Sum: %d%n", sum);
     }
 }

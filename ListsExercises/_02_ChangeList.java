@@ -19,19 +19,14 @@ public class _02_ChangeList {
         String command = scanner.nextLine();
 
         while (!command.equals("end")){
-
             if (command.contains("Delete")){
                 int element = Integer.parseInt(command.split(" ")[1]);
                 numbers.removeAll(Collections.singleton(element));
-
             }else if (command.contains("Insert")){
                 int element = Integer.parseInt(command.split(" ")[1]);
                 int position = Integer.parseInt(command.split(" ")[2]);
                 numbers.add(position,element);
-
             }
-
-
             command = scanner.nextLine();
         }
         for (int number:numbers) {

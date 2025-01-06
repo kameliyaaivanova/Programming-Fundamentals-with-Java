@@ -11,7 +11,8 @@ public class _18_7_BakeryShop {
         Scanner scanner = new Scanner(System.in);
 
         Map<String,Integer> foodQuantity = new LinkedHashMap<>();
-       int soldQuantity = 0;
+
+        int soldQuantity = 0;
 
         String commands = scanner.nextLine();
 
@@ -20,7 +21,6 @@ public class _18_7_BakeryShop {
             String commandName = commandParts[0];
             int quantity = Integer.parseInt(commandParts[1]);
             String food = commandParts[2];
-
             switch (commandName){
                 case "Receive":
                     if (quantity <= 0){
@@ -57,7 +57,6 @@ public class _18_7_BakeryShop {
             }
             commands = scanner.nextLine();
         }
-
         for (Map.Entry<String,Integer> entry : foodQuantity.entrySet()){
             String foodName = entry.getKey();
             int quantity = entry.getValue();

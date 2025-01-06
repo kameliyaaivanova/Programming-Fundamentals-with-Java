@@ -15,10 +15,8 @@ public class _01_MatchFullName {
         Pattern pattern = Pattern.compile("\\b[A-Z][a-z]+ [A-Z][a-z]+\\b");
         Matcher matcher = pattern.matcher(names);
 
-        while (matcher.find()){
-            System.out.print(matcher.group()+ " ");
-
+        while (matcher.find()) {
+            System.out.print(matcher.group() + " ");
         }
-
     }
 }

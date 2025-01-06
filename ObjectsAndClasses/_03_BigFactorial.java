@@ -12,6 +12,7 @@ public class _03_BigFactorial {
         int n = Integer.parseInt(scanner.nextLine());
 
         BigInteger startNum = BigInteger.valueOf(1);
+
         for (int i = 1; i <= n; i++) {
             startNum = startNum.multiply(BigInteger.valueOf(i));
         }

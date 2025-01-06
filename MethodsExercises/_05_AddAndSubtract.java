@@ -13,8 +13,8 @@ public class _05_AddAndSubtract {
         int number3 = Integer.parseInt(scanner.nextLine());
 
         System.out.println(subtracting(number1,number2,number3));
-
     }
+
     public static int adding (int number1,int number2){
         return number1 + number2;
     }
@@ -22,5 +22,4 @@ public class _05_AddAndSubtract {
     public static int subtracting(int number1,int number2,int number3){
        return adding(number1,number2) - number3;
     }
-
 }

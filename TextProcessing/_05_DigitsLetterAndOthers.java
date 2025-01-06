@@ -15,16 +15,14 @@ public class _05_DigitsLetterAndOthers {
 
         for (int i = 0; i < input.length(); i++) {
             char currentElement = input.charAt(i);
-
-            if (Character.isDigit(currentElement)){
+            if (Character.isDigit(currentElement)) {
                 digits.append(currentElement);
             } else if (Character.isAlphabetic(currentElement)) {
                 letters.append(currentElement);
-            }else {
+            } else {
                 others.append(currentElement);
             }
         }
-
         System.out.println(digits.toString());
         System.out.println(letters.toString());
         System.out.println(others.toString());

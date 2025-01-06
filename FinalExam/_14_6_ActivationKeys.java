@@ -13,10 +13,8 @@ public class _14_6_ActivationKeys {
         String input = scanner.nextLine();
 
         while (!input.equals("Generate")){
-
             String[] inputAsArray = input.split(">>>");
             String command = inputAsArray[0];
-
             switch (command){
                 case "Contains":
                     String substring = inputAsArray[1];
@@ -31,16 +29,12 @@ public class _14_6_ActivationKeys {
                     int startIndex = Integer.parseInt(inputAsArray[2]);
                     int endIndex = Integer.parseInt(inputAsArray[3]);
                     String currentSubstring = activationKey.substring(startIndex, endIndex);
-
                     if (symbolCase.equals("Upper")){
                         activationKey = new StringBuilder(activationKey.replace(startIndex, endIndex,currentSubstring.toUpperCase()));
                         System.out.println(activationKey);
-
-
                     } else if (symbolCase.equals("Lower")){
                         activationKey = new StringBuilder(activationKey.replace(startIndex, endIndex,currentSubstring.toLowerCase()));
                         System.out.println(activationKey);
-
                     }
                     break;
                 case "Slice":
@@ -50,14 +44,8 @@ public class _14_6_ActivationKeys {
                     System.out.println(activationKey);
                     break;
             }
-
-
-
             input = scanner.nextLine();
-
         }
-
         System.out.println("Your activation key is: " + activationKey);
-
     }
 }

@@ -13,18 +13,15 @@ public class _09_SpiceMustFlow {
         int totalAmount = 0;
 
         while (startingYield >= 100){
-            days ++;
+            days++;
             totalAmount += startingYield - 26;
             startingYield -= 10;
 
             if (startingYield < 100){
                 totalAmount -= 26;
             }
-
         }
-
         System.out.println(days);
         System.out.println(totalAmount);
-
     }
 }

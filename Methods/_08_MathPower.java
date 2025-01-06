@@ -11,6 +11,7 @@ public class _08_MathPower {
 
         double number1 = Double.parseDouble(scanner.nextLine());
         int power = Integer.parseInt(scanner.nextLine());
+
         System.out.println(new DecimalFormat("0.####").format(pow(number1, power)));
 
     }
@@ -21,7 +22,7 @@ public class _08_MathPower {
         for (int i = 0; i < power; i++) {
             result *= number1;
         }
-        return result;
 
+        return result;
     }
 }

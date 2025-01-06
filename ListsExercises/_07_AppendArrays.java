@@ -12,17 +12,16 @@ public class _07_AppendArrays {
 
         Scanner scanner = new Scanner(System.in);
 
-        String input = scanner.nextLine(); //"1 2 3 |4 5 6 |  7  8"
-        List<String> listSeparatedByPipe = Arrays.stream(input.split("\\|")).collect(Collectors.toList());
-
+        String input = scanner.nextLine();
+        List<String> listSeparatedByPipe = Arrays.stream(input.split("\\|"))
+                .collect(Collectors.toList());
         Collections.reverse(listSeparatedByPipe);
 
-
-        System.out.println(listSeparatedByPipe.toString() //"[  7  8, 4 5 6 , 1 2 3 ]"
-                .replace("[", "") //"  7  8, 4 5 6 , 1 2 3 ]"
-                .replace("]", "") //"  7  8, 4 5 6 , 1 2 3 "
-                .trim()  //"7  8, 4 5 6 , 1 2 3"
-                .replaceAll(",", "") //"7  8 4 5 6  1 2 3"
-                .replaceAll("\\s+", " ")); //"7 8 4 5 6 1 2 3"
+        System.out.println(listSeparatedByPipe.toString()
+                .replace("[", "")
+                .replace("]", "")
+                .trim()
+                .replaceAll(",", "")
+                .replaceAll("\\s+", " "));
     }
 }

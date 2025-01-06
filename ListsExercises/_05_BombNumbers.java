@@ -21,8 +21,6 @@ public class _05_BombNumbers {
 
         while (num.contains(number)) {
             int bombIndex = num.indexOf(number);
-
-
             int leftBound = Math.max(bombIndex - power,0);
             int rightBound = Math.min(bombIndex + power,num.size() - 1);
 
@@ -31,12 +29,10 @@ public class _05_BombNumbers {
             }
         }
         int sum = 0;
-        for (Integer integer : num
-        ) {sum += integer;
 
+        for (Integer integer : num) {
+            sum += integer;
         }
         System.out.println(sum);
-
-
     }
 }

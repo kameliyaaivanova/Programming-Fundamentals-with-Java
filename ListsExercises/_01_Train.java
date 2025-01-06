@@ -20,7 +20,6 @@ public class _01_Train {
         String input = scanner.nextLine();
 
         while (!input.equals("end")){
-
             if (input.contains("Add")){
                 int number = Integer.parseInt(input.split(" ")[1]);
                 wagons.add(number);
@@ -34,11 +33,9 @@ public class _01_Train {
                     }
                 }
             }
-
             input = scanner.nextLine();
-
         }
-        for (int wagon :wagons) {
+        for (int wagon : wagons) {
             System.out.print(wagon + " ");
         }
     }

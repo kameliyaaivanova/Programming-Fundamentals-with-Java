@@ -12,16 +12,12 @@ public class _02_RepeatStrings {
 
         StringBuilder result = new StringBuilder();
 
-        for (String word: words) {
+        for (String word : words) {
             int wordLength = word.length();
-            for (int i = 1; i <= wordLength ; i++) {
+            for (int i = 1; i <= wordLength; i++) {
                 result.append(word);
-
             }
         }
-
         System.out.println(result);
-
-
     }
 }

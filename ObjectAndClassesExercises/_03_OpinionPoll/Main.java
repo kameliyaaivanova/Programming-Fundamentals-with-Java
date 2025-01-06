@@ -14,24 +14,20 @@ public class Main {
 
         int n = Integer.parseInt(scanner.nextLine());
 
-        for (int i = 1; i <= n ; i++) {
+        for (int i = 1; i <= n; i++) {
             String personInformation = scanner.nextLine();
             String name = personInformation.split(" ")[0];
             int age = Integer.parseInt(personInformation.split(" ")[1]);
 
-            Person person = new Person(name,age);
+            Person person = new Person(name, age);
 
-            if (age > 30){
+            if (age > 30) {
                 personList.add(person);
-
             }
         }
 
         for (Person person : personList) {
-            System.out.printf("%s - %d%n",person.getName(),person.getAge());
+            System.out.printf("%s - %d%n", person.getName(), person.getAge());
         }
-
-
-
     }
 }

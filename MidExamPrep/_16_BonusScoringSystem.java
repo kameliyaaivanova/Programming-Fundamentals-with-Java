@@ -14,19 +14,17 @@ public class _16_BonusScoringSystem {
         double maxBonus = Double.MIN_VALUE;
         int attendance = 0;
 
-
-        for (int i = 0; i < numberOfStudents ; i++) {
+        for (int i = 0; i < numberOfStudents; i++) {
             int attendanceOfCurrentStudent = Integer.parseInt(scanner.nextLine());
 
-           double totalBonus = ((double) attendanceOfCurrentStudent) / numberOfLectures * (5 + additionalBonus);
+            double totalBonus = ((double) attendanceOfCurrentStudent) / numberOfLectures * (5 + additionalBonus);
 
-            if (totalBonus > maxBonus){
-                maxBonus =  totalBonus;
+            if (totalBonus > maxBonus) {
+                maxBonus = totalBonus;
                 attendance = attendanceOfCurrentStudent;
             }
         }
-        System.out.printf("Max Bonus: %.0f.%n",(maxBonus));
-        System.out.printf("The student has attended %d lectures.",attendance);
-
+        System.out.printf("Max Bonus: %.0f.%n", (maxBonus));
+        System.out.printf("The student has attended %d lectures.", attendance);
     }
 }

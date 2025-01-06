@@ -1,7 +1,5 @@
 package ObjectAndClassesExercises._02_Article;
 
-import ObjectAndClassesExercises._02_Article.Article;
-
 import java.util.Scanner;
 
 public class Main {
@@ -35,7 +33,6 @@ public class Main {
                     break;
             }
         }
-
         System.out.println(article.toString());
     }
 }

@@ -15,7 +15,6 @@ public class _13_5_HeroesOfCodeAndLogic7 {
         Map<String,Integer> heroHitPoints = new LinkedHashMap<>();
         Map<String,Integer> heroManaPoints = new LinkedHashMap<>();
 
-
         for (int i = 1; i <= numberOfHeroes ; i++) {
             String currentHero = scanner.nextLine();
             String heroName = currentHero.split("\\s")[0];
@@ -23,7 +22,6 @@ public class _13_5_HeroesOfCodeAndLogic7 {
             int manaPoints = Integer.parseInt(currentHero.split("\\s")[2]);
             heroHitPoints.put(heroName,hitPoints);
             heroManaPoints.put(heroName,manaPoints);
-
         }
 
         String input = scanner.nextLine();
@@ -32,27 +30,22 @@ public class _13_5_HeroesOfCodeAndLogic7 {
             String[] inputAsArray = input.split(" - ");
             String command = inputAsArray[0];
             String name = inputAsArray[1];
-
             switch (command){
                 case "CastSpell":
                     int mpNeeded = Integer.parseInt(inputAsArray[2]);
                     String spellName = inputAsArray[3];
                     int currentMp = heroManaPoints.get(name);
-
                     if (currentMp >= mpNeeded){
                         currentMp -= mpNeeded;
                         heroManaPoints.put(name,currentMp);
                         System.out.printf("%s has successfully cast %s and now has %d MP!%n",name,spellName,currentMp);
                     } else {
                         System.out.printf("%s does not have enough MP to cast %s!%n",name,spellName);
-
                     }
                     break;
-
                 case "TakeDamage":
                     int damage = Integer.parseInt(inputAsArray[2]);
                     String attacker = inputAsArray[3];
-
                     int currentHp = heroHitPoints.get(name);
                     currentHp -= damage;
                     if (currentHp > 0){
@@ -64,7 +57,6 @@ public class _13_5_HeroesOfCodeAndLogic7 {
                         System.out.printf("%s has been killed by %s!%n",name,attacker);
                     }
                     break;
-
                 case "Recharge":
                     int amount = Integer.parseInt(inputAsArray[2]);
                     int currentAmountMp = heroManaPoints.get(name);
@@ -78,7 +70,6 @@ public class _13_5_HeroesOfCodeAndLogic7 {
                         heroManaPoints.put(name,currentAmountMp);
                     }
                     break;
-
                 case "Heal":
                     int amountHp = Integer.parseInt(inputAsArray[2]);
                     int currentAmountHp = heroHitPoints.get(name);
@@ -92,12 +83,9 @@ public class _13_5_HeroesOfCodeAndLogic7 {
                         heroHitPoints.put(name,currentAmountHp);
                     }
                     break;
-
             }
-
             input = scanner.nextLine();
         }
-
         for (Map.Entry<String,Integer> entry : heroHitPoints.entrySet()){
             String name = entry.getKey();
             int hitPoints = entry.getValue();
@@ -106,6 +94,5 @@ public class _13_5_HeroesOfCodeAndLogic7 {
             System.out.println("HP: " + hitPoints);
             System.out.println("MP: " + manaPoints);
         }
-
     }
 }

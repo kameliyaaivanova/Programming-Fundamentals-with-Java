@@ -14,22 +14,20 @@ public class _07_StringExplosion {
         int totalStrength = 0;
         for (int i = 0; i <= newText.length() - 1; i++) {
             char currentSymbol = newText.charAt(i);
+
             if (currentSymbol == '>') {
                 int explosionStrength = Integer.parseInt(newText.charAt(i + 1) + "");
                 totalStrength += explosionStrength;
-            } else if (currentSymbol != '>' && totalStrength > 0){
-
+            } else if (currentSymbol != '>' && totalStrength > 0) {
                 newText.deleteCharAt(i);
                 totalStrength--;
                 i--;
             }
         }
-
         System.out.println(newText);
 
 //        String text = scanner.nextLine();
 //        StringBuilder newText = new StringBuilder(text);
-//
 //
 //        int totalStrength = 0;
 //        for (int i = 0; i < newText.length() - 1; i++) {
@@ -44,7 +42,5 @@ public class _07_StringExplosion {
 //            }
 //        }
 //        System.out.println(newText);
-
-
     }
 }

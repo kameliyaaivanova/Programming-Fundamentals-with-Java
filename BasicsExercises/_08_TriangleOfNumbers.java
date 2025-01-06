@@ -10,8 +10,8 @@ public class _08_TriangleOfNumbers {
 
         int n = Integer.parseInt(scanner.nextLine());
 
-        for (int row = 1; row <= n ; row++) {
-            for (int number = 1; number <= row ; number++) {
+        for (int row = 1; row <= n; row++) {
+            for (int number = 1; number <= row; number++) {
                 System.out.print(row + " ");
             }
             System.out.println();

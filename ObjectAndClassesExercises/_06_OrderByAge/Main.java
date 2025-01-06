@@ -8,9 +8,11 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
 
         List<Person> peopleList = new ArrayList<>();
+
         String data = scanner.nextLine();
 
         while (!data.equals("End")) {

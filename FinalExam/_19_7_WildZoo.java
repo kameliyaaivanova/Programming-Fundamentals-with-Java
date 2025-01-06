@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class WildZoo {
+public class _19_7_WildZoo {
 
     public static void main(String[] args) {
 
@@ -23,13 +23,11 @@ public class WildZoo {
                 HashMap<Integer, String> tempMap = new HashMap<>();
                 tempMap.put(Integer.parseInt(splitInput[1]), splitInput[2]);
 
-                if(animalsMap.containsKey(splitInput[0])){
+                if (animalsMap.containsKey(splitInput[0])){
                     int oldAmount = 0;
-
                     for(Map.Entry<Integer, String> entry : animalsMap.get(splitInput[0]).entrySet()){
                         oldAmount = entry.getKey();
                     }
-
                     animalsMap.get(splitInput[0]).remove(oldAmount);
                     animalsMap.get(splitInput[0]).put(Integer.parseInt(splitInput[1]) + oldAmount, splitInput[2]);
                 } else{
@@ -37,31 +35,28 @@ public class WildZoo {
                 }
             }
 
-            if(input.contains("Feed:")){
+            if (input.contains("Feed:")){
                 String newInput = input.replace("Feed: ", "");
                 String[] splitInput = newInput.split("-");
 
-                if(animalsMap.containsKey(splitInput[0])){
+                if (animalsMap.containsKey(splitInput[0])){
                     int oldAmount = 0;
                     String oldArea = "";
-
                     for(Map.Entry<Integer, String> entry : animalsMap.get(splitInput[0]).entrySet()){
                         oldAmount = entry.getKey();
                         oldArea = entry.getValue();
                     }
-
                     animalsMap.get(splitInput[0]).remove(oldAmount);
                     animalsMap.get(splitInput[0]).put(oldAmount - Integer.parseInt(splitInput[1]), oldArea);
 
                     for(Map.Entry<Integer, String> entry : animalsMap.get(splitInput[0]).entrySet()){
                         if(entry.getKey() <= 0){
-
                             for(String s : animalsMap.keySet()){
                                 if(s.equals(splitInput[0])){
                                     System.out.println(s + " was successfully fed");
                                 }
                             }
-                            animalsMap.remove(splitInput[0]);
+                             animalsMap.remove(splitInput[0]);
                         }
                     }
                 }
@@ -92,6 +87,5 @@ public class WildZoo {
         for(String s : areas.keySet()){
             System.out.println(" " + s + ": " + areas.get(s));
         }
-
     }
 }

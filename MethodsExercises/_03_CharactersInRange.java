@@ -10,25 +10,19 @@ public class _03_CharactersInRange {
 
         char start = (scanner.nextLine()).charAt(0);
         char end = (scanner.nextLine()).charAt(0);
+
         charactersBetween(start,end);
     }
 
     public static void charactersBetween(char start,char end){
-
         if (start < end) {
-
             for (char i = (char) (start + 1); i < end; i++) {
                 System.out.print(i + " ");
-
             }
         } else {
-
             for (char i = (char) (end + 1); i < start; i++) {
                 System.out.print(i + " ");
-
             }
-
         }
-
     }
 }

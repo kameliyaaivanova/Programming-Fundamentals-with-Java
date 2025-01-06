@@ -18,10 +18,8 @@ public class _05_ExtractEmails {
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(text);
 
-        while (matcher.find()){
+        while (matcher.find()) {
             System.out.println(matcher.group());
         }
-
-
     }
 }

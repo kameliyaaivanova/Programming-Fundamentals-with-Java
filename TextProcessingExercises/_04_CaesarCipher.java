@@ -15,17 +15,11 @@ public class _04_CaesarCipher {
             char newSymbol = (char) (symbol + 3);
             newText.append(newSymbol);
         }
-
         System.out.println(newText);
-
-//        for (int i = 0; i < text.length(); i++) {
+//       for (int i = 0; i < text.length(); i++) {
 //            char currentSymbol = (char) (text.charAt(i) + 3);
 //            newText.append(currentSymbol);
 //        }
 //        System.out.println(newText);
-
-
-
-
     }
 }

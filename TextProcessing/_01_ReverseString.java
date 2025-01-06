@@ -10,15 +10,10 @@ public class _01_ReverseString {
 
         String word = scanner.nextLine();
 
-        while (!word.equals("end")){
-
+        while (!word.equals("end")) {
             String reversedWord = new StringBuilder(word).reverse().toString();
-
-            System.out.printf("%s = %s%n",word,reversedWord);
-
+            System.out.printf("%s = %s%n", word, reversedWord);
             word = scanner.nextLine();
         }
-
-
     }
 }

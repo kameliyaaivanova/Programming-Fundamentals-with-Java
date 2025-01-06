@@ -16,7 +16,7 @@ public class Main {
 
         int numberOfSongs = Integer.parseInt(scanner.nextLine());
 
-        for (int i = 1; i <= numberOfSongs ; i++) {
+        for (int i = 1; i <= numberOfSongs; i++) {
             List<String> currentSong = Arrays.stream(scanner.nextLine().split("_"))
                     .collect(Collectors.toList());
 
@@ -24,19 +24,19 @@ public class Main {
             String nameOfSong = currentSong.get(1);
             String timeOfSong = currentSong.get(2);
 
-            Song song = new Song(typeOfSong,nameOfSong,timeOfSong);
+            Song song = new Song(typeOfSong, nameOfSong, timeOfSong);
 
             songs.add(song);
         }
         String typeSong = scanner.nextLine();
 
-        if (typeSong.equals("all")){
+        if (typeSong.equals("all")) {
             for (Song song : songs) {
                 System.out.println(song.getName());
             }
         } else {
             for (Song song : songs) {
-                if (song.getTypeList().equals(typeSong)){
+                if (song.getTypeList().equals(typeSong)) {
                     System.out.println(song.getName());
                 }
             }

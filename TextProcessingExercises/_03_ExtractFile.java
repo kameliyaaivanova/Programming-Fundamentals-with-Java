@@ -14,8 +14,7 @@ public class _03_ExtractFile {
         String fileName = fileNameAndExtensionAsArray[0];
         String extension = fileNameAndExtensionAsArray[1];
 
-        System.out.printf("File name: %s%n",fileName);
-        System.out.printf("File extension: %s%n",extension);
-
+        System.out.printf("File name: %s%n", fileName);
+        System.out.printf("File extension: %s%n", extension);
     }
 }

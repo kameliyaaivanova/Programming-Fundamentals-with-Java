@@ -10,43 +10,40 @@ public class _04_SoftUniParking {
 
         Scanner scanner = new Scanner(System.in);
 
-        Map<String,String> register = new LinkedHashMap<>();
+        Map<String, String> register = new LinkedHashMap<>();
 
         int numberOfCommands = Integer.parseInt(scanner.nextLine());
 
-        for (int i = 1; i <= numberOfCommands ; i++) {
+        for (int i = 1; i <= numberOfCommands; i++) {
             String command = scanner.nextLine();
-            String [] commandAsArr = command.split(" ");
+            String[] commandAsArr = command.split(" ");
             String commandName = commandAsArr[0];
             String username = commandAsArr[1];
 
-            switch (commandName){
+            switch (commandName) {
                 case "register":
                     String licensePlateNumber = commandAsArr[2];
-                    if (register.containsKey(username)){
-                        System.out.printf("ERROR: already registered with plate number %s%n",register.get(username));
+                    if (register.containsKey(username)) {
+                        System.out.printf("ERROR: already registered with plate number %s%n", register.get(username));
                     } else {
-                        register.put(username,licensePlateNumber);
-                        System.out.printf("%s registered %s successfully%n",username,licensePlateNumber);
+                        register.put(username, licensePlateNumber);
+                        System.out.printf("%s registered %s successfully%n", username, licensePlateNumber);
                     }
                     break;
 
                 case "unregister":
-                    if (!register.containsKey(username)){
-                        System.out.printf("ERROR: user %s not found%n",username);
+                    if (!register.containsKey(username)) {
+                        System.out.printf("ERROR: user %s not found%n", username);
                     } else {
                         register.remove(username);
-                        System.out.printf("%s unregistered successfully%n",username);
+                        System.out.printf("%s unregistered successfully%n", username);
                     }
                     break;
             }
         }
 
-        for (Map.Entry<String,String> kvp : register.entrySet()) {
-            System.out.printf("%s => %s%n",kvp.getKey(),kvp.getValue());
+        for (Map.Entry<String, String> kvp : register.entrySet()) {
+            System.out.printf("%s => %s%n", kvp.getKey(), kvp.getValue());
         }
-
-
-
     }
 }

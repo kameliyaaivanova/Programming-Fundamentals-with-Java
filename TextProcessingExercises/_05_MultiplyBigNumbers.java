@@ -9,7 +9,6 @@ public class _05_MultiplyBigNumbers {
 
         Scanner scanner = new Scanner(System.in);
 
-
         BigInteger firstNum = new BigInteger(scanner.nextLine());
         BigInteger secondNum = new BigInteger(scanner.nextLine());
         System.out.println(firstNum.multiply(secondNum));

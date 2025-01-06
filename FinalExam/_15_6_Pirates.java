@@ -14,7 +14,6 @@ public class _15_6_Pirates {
         Map<String,Integer> citiesPopulation = new LinkedHashMap<>();
         Map<String,Integer> citiesGold = new LinkedHashMap<>();
 
-
         while (!input.equals("Sail")){
             String[] inputAsArray = input.split("\\|\\|");
             String city = inputAsArray[0];
@@ -36,22 +35,19 @@ public class _15_6_Pirates {
             } else {
                 citiesGold.put(city,gold);
             }
-
             input = scanner.nextLine();
-
         }
+
         String secondInput = scanner.nextLine();
+
         while (!secondInput.equals("End")){
             String[] inputAsArray = secondInput.split("=>");
             String actions = inputAsArray[0];
             String cityToAttack = inputAsArray[1];
-
-
             switch (actions){
                 case "Plunder":
                     int peopleToAttack = Integer.parseInt(inputAsArray[2]);
                     int goldToSteal = Integer.parseInt(inputAsArray[3]);
-
                     int currentPopulation = citiesPopulation.get(cityToAttack);
                     int newPopulation = currentPopulation - peopleToAttack;
                     citiesPopulation.put(cityToAttack,newPopulation);
@@ -78,36 +74,21 @@ public class _15_6_Pirates {
                         System.out.printf("%d gold added to the city treasury. %s now has %d gold.%n",gold,cityToAttack,newAmountOfGold);
                     }
                     break;
-
             }
-
-
-
             secondInput = scanner.nextLine();
-
-
         }
-
         if (!citiesPopulation.isEmpty()){
             int existingSettlements = citiesPopulation.size();
             System.out.printf("Ahoy, Captain! There are %d wealthy settlements to go to:%n",existingSettlements);
 
             for (Map.Entry<String,Integer> entry : citiesPopulation.entrySet()){
-
                 String currentCity = entry.getKey();
                 int currentPopulation = entry.getValue();
                 int currentGold = citiesGold.get(currentCity);
-
                 System.out.printf("%s -> Population: %d citizens, Gold: %d kg%n",currentCity,currentPopulation,currentGold);
-
-
             }
-
-
         } else {
             System.out.println("Ahoy, Captain! All targets have been plundered and destroyed!");
-
         }
-
     }
 }

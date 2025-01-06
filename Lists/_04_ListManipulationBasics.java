@@ -21,23 +21,19 @@ public class _04_ListManipulationBasics {
 
         while (!command.equals("end")) {
             String[] commandAsArray = command.split(" ");
-
             switch (commandAsArray[0]) {
                 case "Add":
                     int numberAdd = Integer.parseInt(command.split(" ")[1]);
                     numbers.add(numberAdd);
                     break;
-
                 case "Remove":
                     int numberRemove = Integer.parseInt(command.split(" ")[1]);
                     numbers.remove(Integer.valueOf(numberRemove));
                     break;
-
                 case "RemoveAt":
                     int index = Integer.parseInt(command.split(" ")[1]);
                     numbers.remove(index);
                     break;
-
                 case "Insert":
                     int number = Integer.parseInt(command.split(" ")[1]);
                     int indexInsert = Integer.parseInt(command.split(" ")[2]);
@@ -45,7 +41,6 @@ public class _04_ListManipulationBasics {
                     break;
             }
             command = scanner.nextLine();
-
         }
 
         for (int number : numbers) {

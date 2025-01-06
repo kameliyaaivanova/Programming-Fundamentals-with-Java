@@ -10,23 +10,20 @@ public class _03_PrintingTriangle {
 
         int number = Integer.parseInt(scanner.nextLine());
 
-        for (int i = 1; i <= number ; i++) {
+        for (int i = 1; i <= number; i++) {
             printRow(i);
         }
 
-        for (int i = number - 1; i >= 1 ; i--) {
+        for (int i = number - 1; i >= 1; i--) {
             printRow(i);
         }
 
     }
     public static void printRow(int number){
 
-        for (int i = 1; i <= number ; i++) {
+        for (int i = 1; i <= number; i++) {
             System.out.print(i + " ");
         }
         System.out.println();
-
-
     }
-
 }

@@ -14,13 +14,12 @@ public class _03_ZigZagArrays {
         String[] sequence1 = new String[n];
         String[] sequence2 = new String[n];
 
-        for (int i = 1; i <= n ; i++) {
-
+        for (int i = 1; i <= n; i++) {
             String input = scanner.nextLine();
             String[] inputArray = input.split(" ");
 
-           String firstElement = inputArray[0];
-           String secondElement = inputArray[1];
+            String firstElement = inputArray[0];
+            String secondElement = inputArray[1];
 
             if (i % 2 == 0){
                 sequence1 [i - 1] = secondElement;
@@ -29,22 +28,16 @@ public class _03_ZigZagArrays {
                 sequence1 [i - 1] = firstElement;
                 sequence2 [i - 1] = secondElement;
             }
-
-
         }
 
         for (String sequence : sequence1) {
             System.out.print(" " + sequence);
         }
         System.out.println();
-
+        
         for (String sequence : sequence2) {
             System.out.print(" " + sequence);
         }
-
-
-
-
 
     }
 

@@ -10,14 +10,11 @@ public class _03_Elevator {
         int numberOfPeople = Integer.parseInt(scanner.nextLine());
         int capacity = Integer.parseInt(scanner.nextLine());
 
-
         if (numberOfPeople < capacity){
             System.out.println("1");
-
         } else {
-            int numberOfCourses = (int) Math.ceil( (double) numberOfPeople /capacity);
+            int numberOfCourses = (int) Math.ceil((double) numberOfPeople / capacity);
             System.out.println(numberOfCourses);
         }
-
     }
 }

@@ -10,17 +10,12 @@ public class _03_ExactSumOfRealNumbers {
         Scanner scanner = new Scanner(System.in);
 
         int n = Integer.parseInt(scanner.nextLine());
-
         BigDecimal sum = new BigDecimal(0);
 
-        for (int i = 1; i <= n ; i++) {
-
+        for (int i = 1; i <= n; i++) {
             BigDecimal number = new BigDecimal(scanner.nextLine());
-
-            sum = sum .add(number);
-
+            sum = sum.add(number);
         }
         System.out.println(sum);
-
     }
 }

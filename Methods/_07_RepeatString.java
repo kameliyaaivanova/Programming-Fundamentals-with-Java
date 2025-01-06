@@ -16,9 +16,10 @@ public class _07_RepeatString {
     public static String newText (String text,int quantity){
         String[] result = new String[quantity];
 
-        for (int i = 0; i < quantity ; i++) {
+        for (int i = 0; i < quantity; i++) {
             result[i] = text;
         }
+
         return String.join("",result);
     }
 

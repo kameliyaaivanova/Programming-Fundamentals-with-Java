@@ -12,18 +12,14 @@ public class _02_WordSynonyms {
 
         int wordsCount = Integer.parseInt(scanner.nextLine());
 
-        for (int i = 1; i <= wordsCount ; i++) {
+        for (int i = 1; i <= wordsCount; i++) {
             String word = scanner.nextLine();
             String synonym = scanner.nextLine();
 
-
             if (!synonyms.containsKey(word)){
                 synonyms.put(word,new ArrayList<>());
-
             }
-
             synonyms.get(word).add(synonym);
-
         }
 
         for (Map.Entry<String,List<String>> kvp : synonyms.entrySet()) {

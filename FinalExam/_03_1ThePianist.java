@@ -32,7 +32,6 @@ public class _03_1ThePianist {
             String[] inputAsArray = input.split("\\|");
             String command = inputAsArray[0];
             String piece = inputAsArray[1];
-
             switch (command){
                 case "Add":
                     String composerToAdd = inputAsArray[2];
@@ -45,7 +44,6 @@ public class _03_1ThePianist {
                         System.out.printf("%s by %s in %s added to the collection!%n",piece,composerToAdd,keyToAdd);
                     }
                     break;
-
                 case "Remove":
                     if (pieceComposer.containsKey(piece)){
                         pieceComposer.remove(piece);
@@ -55,11 +53,9 @@ public class _03_1ThePianist {
                         System.out.printf("Invalid operation! %s does not exist in the collection.%n",piece);
                     }
                     break;
-
                 case "ChangeKey":
                     String newKey = inputAsArray[2];
                     if (pieceKey.containsKey(piece)){
-
                         pieceKey.replace(piece,newKey);
                         System.out.printf("Changed the key of %s to %s!%n",piece,newKey);
                     }else {
@@ -69,20 +65,11 @@ public class _03_1ThePianist {
             }
             input = scanner.nextLine();
         }
-
         for (Map.Entry<String,String> entry : pieceComposer.entrySet()){
             String piece = entry.getKey();
             String composer = entry.getValue();
             String key = pieceKey.get(piece);
-
             System.out.printf("%s -> Composer: %s, Key: %s%n",piece,composer,key);
         }
-
-
     }
-
-
-
-
-
 }

@@ -20,8 +20,6 @@ public class _01_Ages {
             System.out.println("adult");
         } else if (age >= 66 ){
             System.out.println("elder");
-
         }
-
     }
 }

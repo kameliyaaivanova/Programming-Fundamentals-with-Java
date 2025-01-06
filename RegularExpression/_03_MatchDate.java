@@ -14,9 +14,8 @@ public class _03_MatchDate {
         Pattern pattern = Pattern.compile("\\b(?<day>[\\d]{2})([-./])(?<month>[A-Z]{1}[a-z]{2})\\2(?<year>[\\d]{4})\\b");
         Matcher matcher = pattern.matcher(input);
 
-        while (matcher.find()){
-
-            System.out.printf("Day: %s, Month: %s, Year: %s%n",matcher.group("day"),matcher.group("month"),matcher.group("year"));
+        while (matcher.find()) {
+            System.out.printf("Day: %s, Month: %s, Year: %s%n", matcher.group("day"), matcher.group("month"), matcher.group("year"));
         }
     }
 }

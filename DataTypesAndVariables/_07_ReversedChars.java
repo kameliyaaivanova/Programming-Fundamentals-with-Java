@@ -11,7 +11,6 @@ public class _07_ReversedChars {
         char firstInput = scanner.nextLine().charAt(0);
         char secondInput = scanner.nextLine().charAt(0);
         char thirdInput = scanner.nextLine().charAt(0);
-
         System.out.println(""+thirdInput+" "+secondInput+" "+firstInput);
     }
 }

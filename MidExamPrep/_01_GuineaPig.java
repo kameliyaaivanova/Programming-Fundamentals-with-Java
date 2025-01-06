@@ -17,10 +17,8 @@ public class _01_GuineaPig {
 
         for (int i = 1; i <= days ; i++) {
             foodQuantity -= 300;
-
             if (i % 2 == 0){
-           hayQuantity -= (5.00 / 100 * foodQuantity);
-
+                hayQuantity -= (5.00 / 100 * foodQuantity);
             }
             if (i % 3 == 0) {
                 coverQuantity -= (pigWeight * 1 / 3);
@@ -32,6 +30,5 @@ public class _01_GuineaPig {
         } else {
             System.out.println("Merry must go to the pet store!");
         }
-
     }
 }

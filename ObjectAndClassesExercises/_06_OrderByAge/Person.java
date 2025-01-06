@@ -11,7 +11,6 @@ public class Person {
         this.age = age;
     }
 
-    //getters
     public String getName() {
         return this.name;
     }

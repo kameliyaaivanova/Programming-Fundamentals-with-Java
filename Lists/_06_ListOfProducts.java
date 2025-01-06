@@ -17,15 +17,13 @@ public class _06_ListOfProducts {
 
         for (int i = 1; i <= n; i++) {
             String product = scanner.nextLine();
-
             products.add(product);
         }
 
         Collections.sort(products);
+
         for (int i = 0; i < products.size(); i++) {
             System.out.printf("%d.%s%n",i + 1,products.get(i));
         }
-
     }
-
 }

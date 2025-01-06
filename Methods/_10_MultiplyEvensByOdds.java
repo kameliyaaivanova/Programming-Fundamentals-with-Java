@@ -12,14 +12,11 @@ public class _10_MultiplyEvensByOdds {
         int number = Math.abs(Integer.parseInt(scanner.nextLine()));
         System.out.println(getMultiple(number));
 
-
     }
     public static int getMultiple (int number){
         int sumOfOdd = oddNumbers(number);
         int sumOfEven = evenNumbers(number);
-
         return sumOfEven * sumOfOdd;
-
     }
     public static int evenNumbers (int number) {
 
@@ -36,11 +33,9 @@ public class _10_MultiplyEvensByOdds {
             }
         }
         return sumEven;
-
     }
 
     public static int oddNumbers(int number) {
-
         String intToString = Integer.toString(number);
 
         int[] array = Arrays.stream(intToString.split(""))
@@ -55,6 +50,5 @@ public class _10_MultiplyEvensByOdds {
             }
         }
         return sumOdd;
-
     }
 }

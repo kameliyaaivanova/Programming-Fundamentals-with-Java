@@ -6,7 +6,7 @@ public class Student {
     private String secondName;
     private double grade;
 
-    public Student(String firstName,String secondName,double grade){
+    public Student(String firstName, String secondName, double grade) {
         this.firstName = firstName;
         this.secondName = secondName;
         this.grade = grade;
@@ -25,15 +25,4 @@ public class Student {
         return this.grade;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public void setLastName(String lastName) {
-        this.secondName = lastName;
-    }
-
-    public void setGrade(double grade) {
-        this.grade = grade;
-    }
 }

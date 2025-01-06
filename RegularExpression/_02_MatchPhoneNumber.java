@@ -1,6 +1,5 @@
 package RegularExpression;
 
-import javax.print.DocFlavor;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -19,9 +18,8 @@ public class _02_MatchPhoneNumber {
         Matcher matcher = pattern.matcher(phoneNumber);
 
         List<String> newPhoneNum = new ArrayList<>();
-        while (matcher.find()){
+        while (matcher.find()) {
             newPhoneNum.add(matcher.group());
-
         }
         System.out.println(String.join(", ", newPhoneNum));
     }

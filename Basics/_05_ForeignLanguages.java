@@ -9,13 +9,13 @@ public class _05_ForeignLanguages {
         Scanner scanner = new Scanner(System.in);
 
         String countryName = scanner.nextLine();
-        if (countryName.equals("England") || countryName.equals("USA")){
+
+        if (countryName.equals("England") || countryName.equals("USA")) {
             System.out.println("English");
-        } else if (countryName.equals("Spain")|| countryName.equals("Argentina") || countryName.equals("Mexico")) {
+        } else if (countryName.equals("Spain") || countryName.equals("Argentina") || countryName.equals("Mexico")) {
             System.out.println("Spanish");
         } else {
             System.out.println("unknown");
-
         }
     }
 }

@@ -14,9 +14,9 @@ public class _01_IntegerOperations {
         int number3 = Integer.parseInt(scanner.nextLine());
         int number4 = Integer.parseInt(scanner.nextLine());
 
-        int addedNumbers = number1+number2;
-        int dividedNumbers = addedNumbers/number3;
-        int multipliedNumbers = dividedNumbers*number4;
+        int addedNumbers = number1 + number2;
+        int dividedNumbers = addedNumbers / number3;
+        int multipliedNumbers = dividedNumbers * number4;
         System.out.println(multipliedNumbers);
     }
 }

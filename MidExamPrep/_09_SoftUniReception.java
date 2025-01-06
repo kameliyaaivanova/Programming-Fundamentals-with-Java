@@ -14,19 +14,16 @@ public class _09_SoftUniReception {
         int studentsCount = Integer.parseInt(scanner.nextLine());
         int hoursSum = 0;
 
-        while (studentsCount > 0){
+        while (studentsCount > 0) {
             hoursSum++;
-            if ( hoursSum % 4 == 0){
+            if (hoursSum % 4 == 0) {
                 continue;
-
-            }else {
+            } else {
                 studentsCount -= firstEmployeeEfficiency;
                 studentsCount -= secondEmployeeEfficiency;
                 studentsCount -= thirdEmployeeEfficiency;
             }
-
-
         }
-        System.out.printf("Time needed: %dh.",hoursSum);
+        System.out.printf("Time needed: %dh.", hoursSum);
     }
 }

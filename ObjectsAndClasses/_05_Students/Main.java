@@ -16,7 +16,7 @@ public class Main {
 
         String command = scanner.nextLine();
 
-        while (!command.equals("end")){
+        while (!command.equals("end")) {
             String[] studentsInformation = command.split(" ");
 
             String name = studentsInformation[0];
@@ -24,8 +24,7 @@ public class Main {
             String age = studentsInformation[2];
             String city = studentsInformation[3];
 
-
-            Student student = new Student(name,secondName,age,city);
+            Student student = new Student(name, secondName, age, city);
 
             students.add(student);
 
@@ -34,10 +33,9 @@ public class Main {
         String cityName = scanner.nextLine();
 
         for (Student student : students) {
-            if (student.getHomeTown().equals(cityName)){
-                System.out.printf("%s %s is %s years old%n",student.getFirstName(),student.getLastName(),student.getAge());
+            if (student.getHomeTown().equals(cityName)) {
+                System.out.printf("%s %s is %s years old%n", student.getFirstName(), student.getLastName(), student.getAge());
             }
-
         }
     }
 }

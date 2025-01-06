@@ -10,22 +10,14 @@ public class _02_CommonElements {
         Scanner scanner = new Scanner(System.in);
 
         String[] firstArray = (scanner.nextLine().split(" "));
-
         String[] secondArray = (scanner.nextLine().split(" "));
-
 
         for (String elementsFromSecondArray : secondArray) {
             for (String elementsFromFirstArray : firstArray) {
-
                 if (elementsFromSecondArray.equals(elementsFromFirstArray)){
                     System.out.print(elementsFromSecondArray + " ");
-
                 }
             }
         }
-
-
-
-
     }
 }

@@ -9,12 +9,8 @@ public class _06_CharsToString {
         Scanner scanner = new Scanner(System.in);
 
         char firstInput = scanner.nextLine().charAt(0);
-
         char secondInput = scanner.nextLine().charAt(0);
-
         char thirdInput = scanner.nextLine().charAt(0);
-
         System.out.println(""+firstInput+secondInput+thirdInput);
-
     }
 }

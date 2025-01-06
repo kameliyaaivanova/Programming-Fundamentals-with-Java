@@ -12,7 +12,6 @@ public class _01_StudentInformation {
         int age = Integer.parseInt(scanner.nextLine());
         double grade = Double.parseDouble(scanner.nextLine());
 
-        System.out.printf("Name: %s, Age: %d, Grade: %.2f",name,age,grade);
-
+        System.out.printf("Name: %s, Age: %d, Grade: %.2f", name, age, grade);
     }
 }

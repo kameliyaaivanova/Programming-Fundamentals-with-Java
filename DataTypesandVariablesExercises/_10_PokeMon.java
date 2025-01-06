@@ -19,17 +19,12 @@ public class _10_PokeMon {
             reachedTarget++;
 
             if (pokePowerN == originPokePowerN / 2){
-
                 if (exhaustionFactorY != 0){
                 pokePowerN /= exhaustionFactorY;
                 }
             }
-
         }
-
             System.out.println(pokePowerN);
             System.out.println(reachedTarget);
-
-
     }
 }

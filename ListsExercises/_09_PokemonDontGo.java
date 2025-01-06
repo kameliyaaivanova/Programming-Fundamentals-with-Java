@@ -14,8 +14,7 @@ public class _09_PokemonDontGo {
         List<Integer> numbers =  Arrays.stream(scanner.nextLine()
                         .split("\\s+"))
                 .map(Integer::parseInt)
-                .collect(Collectors.toList()); // {4, 5, 3}
-
+                .collect(Collectors.toList());
 
         int sum = 0;
 
@@ -23,37 +22,28 @@ public class _09_PokemonDontGo {
             int index = Integer.parseInt(scanner.nextLine());
 
             if (index < 0) {
-
                 int firstElement = numbers.get(0);
                 numbers.remove(0);
                 sum += firstElement;
-
                 int lastElement = numbers.get(numbers.size() - 1);
                 numbers.add(0, lastElement);
                 modifyList(numbers, firstElement);
             }
-
             else if (index > numbers.size() - 1) {
-
                 int lastElement = numbers.get(numbers.size() - 1);
                 numbers.remove(numbers.size() - 1);
                 sum += lastElement;
-
                 int firstElement = numbers.get(0);
                 numbers.add(firstElement);
                 modifyList(numbers, lastElement);
             }
-
             else if (index >= 0 && index <= numbers.size() - 1) {
-
                 int removedNumber = numbers.get(index);
                 sum += removedNumber;
-
                 numbers.remove(index);
                 modifyList(numbers, removedNumber);
             }
         }
-
         System.out.println(sum);
     }
 
@@ -65,7 +55,6 @@ public class _09_PokemonDontGo {
             } else {
                 currentElement -= removedNumber;
             }
-
             numbers.set(index, currentElement);
         }
     }

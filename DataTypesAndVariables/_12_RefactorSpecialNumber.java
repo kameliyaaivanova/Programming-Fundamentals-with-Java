@@ -17,12 +17,12 @@ public class _12_RefactorSpecialNumber {
                 sum += number % 10;
                 number = number / 10;
             }
+
             if (sum == 5 || sum == 7 || sum == 11) {
                 System.out.printf("%d -> True%n", num);
             } else {
                 System.out.printf("%d -> False%n", num);
             }
         }
-
     }
 }

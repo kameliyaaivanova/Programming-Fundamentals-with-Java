@@ -16,7 +16,5 @@ public class _06_CalculateRectangleArea {
         int length = Integer.parseInt(scanner.nextLine());
 
         return width * length;
-
-
     }
 }

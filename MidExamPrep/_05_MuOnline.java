@@ -30,7 +30,6 @@ public class _05_MuOnline {
                 System.out.printf("You healed for %d hp.%n", initialHealth - healthBeforeHealing);
                 System.out.printf("Current health: %d hp.%n", initialHealth);
 
-
             } else if (roomCommand.equals("chest")) {
                 int bitcoins = Integer.parseInt(room.split(" ")[1]);
                 initialBitcoins += bitcoins;
@@ -53,7 +52,5 @@ public class _05_MuOnline {
         System.out.println("You've made it!");
         System.out.printf("Bitcoins: %d%n",initialBitcoins);
         System.out.printf("Health: %d%n",initialHealth);
-
-
     }
 }

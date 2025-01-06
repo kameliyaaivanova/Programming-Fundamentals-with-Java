@@ -23,6 +23,5 @@ public class _02_Division {
         }else {
             System.out.println("Not divisible");
         }
-
     }
 }

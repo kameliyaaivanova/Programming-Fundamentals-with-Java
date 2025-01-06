@@ -12,14 +12,11 @@ public class _06_ReplaceRepeatingChars {
         StringBuilder newText = new StringBuilder(text);
 
         for (int i = 0; i < newText.length() - 1; i++) {
-            if (newText.charAt(i) == newText.charAt(i + 1)){
-                newText.deleteCharAt(i+1);
+            if (newText.charAt(i) == newText.charAt(i + 1)) {
+                newText.deleteCharAt(i + 1);
                 i--;
             }
-
         }
         System.out.println(newText);
-
-
     }
 }

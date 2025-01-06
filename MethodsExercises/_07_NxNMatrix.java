@@ -9,6 +9,7 @@ public class _07_NxNMatrix {
         Scanner scanner = new Scanner(System.in);
 
         int n = Integer.parseInt(scanner.nextLine());
+
         square(n);
     }
     public static void square(int n){
@@ -18,6 +19,5 @@ public class _07_NxNMatrix {
             }
             System.out.println();
         }
-
     }
 }

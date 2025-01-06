@@ -12,20 +12,16 @@ public class _04_TextFilter {
         String[] bannedWords = scanner.nextLine().split(", ");
         String text = scanner.nextLine();
 
-        for (String word:bannedWords) {
+        for (String word : bannedWords) {
             String replacedWord = getReplacedWord(word);
-            text = text.replace(word,replacedWord);
-
+            text = text.replace(word, replacedWord);
         }
-
         System.out.println(text);
     }
 
     private static String getReplacedWord(String word) {
         char[] replacementCharArray = new char[word.length()];
-
-        Arrays.fill(replacementCharArray,'*');
-
+        Arrays.fill(replacementCharArray, '*');
         return new String(replacementCharArray);
     }
 }

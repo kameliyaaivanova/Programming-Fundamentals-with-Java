@@ -19,22 +19,21 @@ public class _17_TreasureHunt {
 
         String input = scanner.nextLine();
 
-        while (!input.equals("Yohoho!")){
+        while (!input.equals("Yohoho!")) {
             String command = input.split(" ")[0];
-
-            switch (command){
+            switch (command) {
                 case "Loot":
                     String[] words = input.split(" ");
                     for (int i = 1; i < words.length; i++) {
                         String currentString = words[i];
-                        if (!items.contains(currentString)){
-                            items.add(0,currentString);
+                        if (!items.contains(currentString)) {
+                            items.add(0, currentString);
                         }
                     }
                     break;
                 case "Drop":
                     int currentIndex = Integer.parseInt(input.split(" ")[1]);
-                    if (currentIndex >= 0 && currentIndex < items.size()){
+                    if (currentIndex >= 0 && currentIndex < items.size()) {
                         String currentNum = items.remove(currentIndex);
                         items.add(currentNum);
                     }
@@ -44,9 +43,8 @@ public class _17_TreasureHunt {
                     if (stealCount > items.size()) {
                         stealCount = items.size();
                     }
-
-                    while (stealCount > 0){
-                        String removedItem = items.remove(items.size()-1);
+                    while (stealCount > 0) {
+                        String removedItem = items.remove(items.size() - 1);
                         newItems.add(0, removedItem);
                         stealCount--;
                     }
@@ -55,8 +53,7 @@ public class _17_TreasureHunt {
             }
             input = scanner.nextLine();
         }
-
-        if (items.isEmpty()){
+        if (items.isEmpty()) {
             System.out.println("Failed treasure hunt.");
         } else {
             int count = 0;
@@ -65,7 +62,7 @@ public class _17_TreasureHunt {
                 sumOfLength += item.length();
                 count++;
             }
-            double averageGain =  sumOfLength / count;
+            double averageGain = sumOfLength / count;
             System.out.printf("Average treasure gain: %.2f pirate credits.%n", averageGain);
         }
     }

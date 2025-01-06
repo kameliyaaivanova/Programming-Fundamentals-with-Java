@@ -11,15 +11,9 @@ public class _03_SubString {
         String toRemove = scanner.nextLine();
         String text = scanner.nextLine();
 
-        int index = text.indexOf(toRemove);
-
         while (text.contains(toRemove)) {
             text = text.replace(toRemove, "");
-
         }
-
         System.out.println(text);
-
-
     }
 }

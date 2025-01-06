@@ -19,6 +19,5 @@ public class _01_SignOfInteger {
         } else  {
             System.out.printf("The number %d is zero.",number);
         }
-
     }
 }
